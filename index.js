@@ -1,16 +1,37 @@
-const clients = ["Alexis", "Maria", "Nikos", "Elena", "Stavros"];
-const pricePerSession = 35;
+const clients = [
+  {
+    name: "Alexis",
+    age: 25,
+    sessionsPerWeek: 3,
+    pricePerSession: 35,
+    isActive: true,
+  },
+  {
+    name: "Maria",
+    age: 30,
+    sessionsPerWeek: 2,
+    pricePerSession: 35,
+    isActive: true,
+  },
+  {
+    name: "Nikos",
+    age: 22,
+    sessionsPerWeek: 4,
+    pricePerSession: 35,
+    isActive: false,
+  },
+];
 
-function showAllClients(clientList) {
-  clientList.forEach((client) => {
-    console.log("Client: " + client);
-  });
-}
+let totalEarnings = 0;
 
-function calculateEarnings(clientList, price) {
-  return clientList.length * price;
-}
+clients.forEach((client) => {
+  if (client.isActive === true) {
+    let weeklyPayment = client.sessionsPerWeek * client.pricePerSession;
+    totalEarnings = totalEarnings + weeklyPayment;
+    console.log(client.name + " pays €" + weeklyPayment + " per week");
+  } else {
+    console.log(client.name + " is inactive - no charge");
+  }
+});
 
-showAllClients(clients);
-console.log("Total clients:", clients.length);
-console.log("Total earnings: €" + calculateEarnings(clients, pricePerSession));
+console.log("Total weekly earnings: €" + totalEarnings);
