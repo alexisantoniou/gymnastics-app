@@ -1,15 +1,7 @@
-function calculateEarnings(clients, pricePerSession) {
-  return clients * pricePerSession;
-}
+let clients = ["Alexis", "Maria", "Nikos", "Elena", "Stavros"];
 
-function greetClient(name) {
-  return "Welcome to the gym, " + name + "!";
-}
-
-const trainerName = "Alexis";
-const clients = 12;
-const price = 35;
-
-console.log(greetClient(trainerName));
-console.log("Clients this month:", clients);
-console.log("Earnings this month: €" + calculateEarnings(clients, price));
+console.log(clients);
+console.log(clients[0]);
+console.log(clients[1]);
+console.log(clients[4]);
+console.log("Total clients:", clients.length);
