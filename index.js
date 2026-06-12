@@ -1,7 +1,16 @@
-let clients = ["Alexis", "Maria", "Nikos", "Elena", "Stavros"];
+const clients = ["Alexis", "Maria", "Nikos", "Elena", "Stavros"];
+const pricePerSession = 35;
 
-console.log(clients);
-console.log(clients[0]);
-console.log(clients[1]);
-console.log(clients[4]);
+function showAllClients(clientList) {
+  clientList.forEach((client) => {
+    console.log("Client: " + client);
+  });
+}
+
+function calculateEarnings(clientList, price) {
+  return clientList.length * price;
+}
+
+showAllClients(clients);
 console.log("Total clients:", clients.length);
+console.log("Total earnings: €" + calculateEarnings(clients, pricePerSession));
