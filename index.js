@@ -1,22 +1,15 @@
-// let trainerName = "Alexis";
-// let numberOfClients = 10;
-// let isActicve = true;
+function calculateEarnings(clients, pricePerSession) {
+  return clients * pricePerSession;
+}
 
-// console.log(trainerName);
-// console.log(numberOfClients);
-// console.log(isActicve);
+function greetClient(name) {
+  return "Welcome to the gym, " + name + "!";
+}
 
-// let trainerName = "Alexis";
-// let numberOfClients = 10;
-// let priceSession = 35;
-// let totalEarnings = numberOfClients * priceSession;
+const trainerName = "Alexis";
+const clients = 12;
+const price = 35;
 
-// console.log("Trainer:", trainerName);
-// console.log("Total Earnings:", totalEarnings);
-
-const appName = "GymnasticsApp";
-let numberOfClients = 10;
-numberOfClients = 12;
-
-console.log("App:", appName);
-console.log("Clients now:", numberOfClients);
+console.log(greetClient(trainerName));
+console.log("Clients this month:", clients);
+console.log("Earnings this month: €" + calculateEarnings(clients, price));
